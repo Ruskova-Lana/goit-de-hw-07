@@ -77,7 +77,9 @@ create_table >> pick_medal >> pick_medal_task >> [calc_Bronze, calc_Silver, calc
 ### Grid: успішний запуск і запуск із затримкою 35 секунд
 ![Failed sensor](screenshots/tasks_35_seconds_failed.png)
 
-### Graph
+### Graph (запуск із `DELAY_SECONDS = 35`)
+Обрано `Silver`, гілки `calc_Bronze` і `calc_Gold` пропущені (`skipped`), сенсор `check_for_correctness` впав, бо запис старший за 30 секунд.
+
 ![Graph](screenshots/graph.png)
 
 ### Grid (статуси задач)
