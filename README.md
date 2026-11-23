@@ -60,11 +60,22 @@ create_table >> pick_medal >> pick_medal_task >> [calc_Bronze, calc_Silver, calc
 
 ## Результат
 
-Запуск завершився успішно за ~23 секунди. Було обрано `Silver`, у таблицю записано:
+Було виконано два запуски (в обох випадково обрано `Silver`):
+
+| Запуск | `DELAY_SECONDS` | Тривалість | Статус |
+|--------|-----------------|------------|--------|
+| 1 | 10 | 00:00:23 | ✅ success |
+| 2 | 35 | 00:00:58 | ❌ failed — `check_for_correctness` впав, бо запис старший за 30 с |
+
+Вміст таблиці `neo_data.hw07_medal_counts` після обох запусків:
 
 | id | medal_type | count | created_at |
 |----|------------|-------|------------|
 | 1 | Silver | 42827 | 2026-11-23 16:55:50 |
+| 2 | Silver | 42827 | 2026-11-23 17:05:41 |
+
+### Grid: успішний запуск і запуск із затримкою 35 секунд
+![Failed sensor](screenshots/tasks_35_seconds_failed.png)
 
 ### Graph
 ![Graph](screenshots/graph.png)

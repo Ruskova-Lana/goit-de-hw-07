@@ -20,7 +20,7 @@ RESULTS_TABLE = "neo_data.hw07_medal_counts"
 SOURCE_TABLE = "olympic_dataset.athlete_event_results"
 
 MEDALS = ["Bronze", "Silver", "Gold"]
-DELAY_SECONDS = 10  # поставте 35, щоб побачити падіння сенсора
+DELAY_SECONDS = 10 # поставте 35, щоб побачити падіння сенсора
 
 
 def pick_medal_fn():
